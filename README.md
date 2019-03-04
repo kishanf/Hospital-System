@@ -1,0 +1,2 @@
+# Hospital-System
+The Hospital Project, has been created in the enterprise space Jakarta EE formally known was Java EE. The various components of the project focus on implementing functional business services which are defined by the business operations that can be carried out by that component.  The project is built using JPA and EJB beans which use dependency injection (CDI) to control the business logic; The chosen server to run the project on is Payara 5 which is the new implementation of GlassFish. 
