@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:c= "http://xmlns.jcp.org/jsp/jstl/core"
+xmlns:fn= "http://xmlns.jcp.org/jsp/jstl/functions">
+<head>
+<title>Welcome To Novus Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="home.css"/>
+  <link type="text/javascript" href="js/jquery.js"/>
+</head>
+
+<body>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1></h1>
+    </div>
+  </div>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60"></body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="glyphicon glyphicon-header logo-1"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://localhost:8080/Hospital1/home.xhtml">HOME</a>
+          </li>
+           <li>
+            <a href="http://localhost:8080/Hospital1/list.xhtml">HOME</a>
+          </li>
+          
+         
+         
+         
+         
+         
+         
+         <!--   <li>
+            <a href="http://localhost:8080/Hospital1/patientlist.xhtml">PATIENT</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/Hospital1/doctorlist.xhtml">DOCTOR</a>
+          </li>
+           <li>
+            <a href="http://localhost:8080/Hospital1/adminlist.xhtml">ADMIN</a>
+          </li>
+          -->
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="bootstrap2" class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart logo"></span>
+      </div>
+
+      <div class="col-sm-8">
+        <h2>
+          <strong>Novus Hosptial</strong>
+        </h2>
+        <h4>
+          <strong></strong>
+        </h4>
+        <p>
+          Opened in October 2013 in Novus Hospital, England, Novus Hospital – The Chesterfield is part of
+           the Nuffield Health private hospital network. Complete with three digital operating rooms and an 
+           advanced diagnostic hub, the new facility is the first totally digital hospital in the region. 
+           “The innovative equipment used in the high-tech digital theaters will allow surgeons to have complete 
+           control over every aspect of their surgery,” explained Nuffield Health. The hospital’s imaging technology 
+           is up to the minute, featuring digital mammography, MRI, CT and high-definition endoscopy together with 
+           “five-star, state-of-the-art facilities.” According to the Bristol Post, the hospital, which cost 
+           £32.74 million to develop, 
+          has “[attracted] some of the country’s top consultants – a number of whom are leaders in their field.”
+         
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="newmarket" class="container-fluid text-center">
+    <h2>ABOUT</h2>
+    <h4>The Novus Hospital</h4>
+    <br></br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-cloud logo-small"></span>
+        <h4>Online Booking</h4>
+      </div>
+      <div class="col-sm-4">
+        <span class="count">1455</span>
+       
+        <h4>Current Patients</h4>
+      </div>
+
+      <!-- could use IMPORT for this glyphicon -->
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-eye-open logo-small"></span>
+        <h4>Specialist Optical Department</h4>
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-calendar logo-small"></span>
+        <h4>Appointment</h4>
+        <p>Reminders</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-road logo-small"></span>
+        <h4>Easy Access</h4>
+        <p>Junction 8 on the M25</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-erase logo-small"></span>
+        <h4>UKs Leading Hospital For</h4>
+        <p>Experimental Drugs</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer class="container-fluid bg-4 text-center">
+    <a href="mailto:ckf11@uni.brighton.ac.uk"> Email: Kishan Fokeer</a>
+    <p>&copy; Kishan Fokeer 2018 </p>
+  </footer>
+
+  <!--/Script for number stat count -->
+
+  <script>
+    $('.count').each(function () {
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+      }, {
+          duration: 10000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+    });
+  </script>
+
+
+</body>
+
+</html>

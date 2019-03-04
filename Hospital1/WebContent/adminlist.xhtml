@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:c= "http://xmlns.jcp.org/jsp/jstl/core"
+xmlns:fn= "http://xmlns.jcp.org/jsp/jstl/functions">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Patient List</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="patientlist.css"/>
+  <link type="text/javascript" href="js/jquery.js"/>
+</head>
+
+<body>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1></h1>
+    </div>
+  </div>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60"> </body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="glyphicon glyphicon-header logo-1"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://localhost:8080/Hospital1/home.xhtml">HOME</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/Hospital1/patientlist.xhtml">PATIENT</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/Hospital1/doctorlist.xhtml">DOCTOR</a>
+          </li>
+           <li>
+            <a href="http://localhost:8080/Hospital1/adminlist.xhtml">ADMIN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<f:view>
+<div class="container-fluid">
+<h2><strong>List of Current Admins</strong></h2>
+<br></br>
+
+<h:form id = "pattab">
+<h:dataTable class="table table-striped" id="admin" value="#{adminService.findAllAdmins()}" var="a">
+		            	<h:column>
+		            		<f:facet name="header">Admin ID</f:facet>
+		            			<h:outputText id="admin_id" value="#{a.admin_ID}" />
+		            	</h:column>
+		            	<h:column>
+		            		<f:facet name="header">First Name</f:facet>
+		            			<h:outputText id="admin_first_name" value="#{a.admin_First_Name}" />
+		            	</h:column>
+		            	<h:column>
+		            		<f:facet name="header">Last Name</f:facet>
+		            			<h:outputText id="admin_last_name" value="#{a.admin_Last_Name}" />
+		            	</h:column>
+		            	<h:column>
+		            		<f:facet name="header">Gender</f:facet>
+		            			<h:outputText id="admin_gender" value="#{a.admin_Gender}" />
+		            	</h:column>
+		            	<h:column>
+		            		<f:facet name="header">Department</f:facet>
+		            			<h:outputText id="department_id" value="#{e .department_Id}" />
+		            	</h:column>
+		   
+</h:dataTable>
+</h:form>
+</div>
+</f:view>
+
+<footer class="container-fluid bg-4 text-center">
+    <a href="mailto:ckf11@uni.brighton.ac.uk"> Email: Kishan Fokeer</a>
+    <p>&copy; Kishan Fokeer 2018 </p>
+  </footer>
+
+</body>
+</html>
